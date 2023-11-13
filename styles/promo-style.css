@@ -37,16 +37,19 @@
     }
 
     .promo h1{
-        bottom: 8%;
+        bottom: 10%;
     }
    
 }
 
 @media (max-width: 550px) {
     .ttl-bg{
-        bottom: -20px;
+        bottom: -27px;
     }
 
+    .promo h1{
+        bottom: 6%;
+    }
 
 }
 
