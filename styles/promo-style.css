@@ -2,19 +2,21 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    height: calc(250px + (840 - 250) * ((100vw - 380px) / (1530 - 380)));
+    height: 840px;
     position: relative;
     overflow: hidden;
+    z-index: 10;
+    
 }
 .ttl-bg{
     position: absolute;
-    width: 1425px;
-    height: 145px;
-    height: calc(120px + (145 - 120) * ((100vw - 360px) / (1530 - 360)));
+    width: 80%;
+    height: 125px;
     background-repeat: no-repeat;
     background-size: cover;
-    bottom: calc(20px + (100 - 20) * ((100vw - 801px) / (1530 - 801)));
-    left: -220px;
+    bottom: 128px;
+    left: 0px;
+    box-shadow: 8px 12px 8px 0px rgba(0, 0, 0, 0.20), 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 .promo .container{
     position: relative;
@@ -23,11 +25,36 @@
 
 .promo h1{
     position: absolute;
-    bottom: calc(16px + (164 - 16) * ((100vw - 360px) / (1530 - 360)));
+    bottom: 164px;
 }
-@media (max-width: 800px) {
+
+
+@media (max-width: 1450px) {
+    .ttl-bg{
+        width: 90%;
+    }
+    
+}
+
+@media (max-width: 1300px) {
+    .ttl-bg{
+        width: 100%;
+    }
+
+    .promo h1{
+        font-size: 40px;
+    }
+}
+
+@media (max-width: 955px) {
+    .promo h1{
+        bottom: 145px;
+    }
+    
+}
+@media (max-width: 700px) {
    .promo{
-    /* height: 410px; */
+    height: 335px;
     background-size: contain;
     background-position-y: 0px;
    }
@@ -37,24 +64,28 @@
     }
 
     .promo h1{
-        bottom: 10%;
+        font-size: 24px;
+        bottom: 12%;
     }
    
 }
 
-@media (max-width: 550px) {
+@media (max-width: 505px) {
+    .promo{
+        height: 300px;
+    }
+}
+
+@media (max-width: 425px) {
+    .promo{
+        height: 235px;
+    }
+    
     .ttl-bg{
-        bottom: -27px;
+        bottom: -37px;
     }
 
     .promo h1{
-        bottom: 6%;
+        bottom: 9%;
     }
-
-}
-
-@media (max-width: 480px) {
-    .promo{
-    }
-    
 }

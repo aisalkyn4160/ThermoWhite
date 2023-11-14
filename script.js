@@ -2,6 +2,7 @@
 const burger = document.querySelector('.header__burger-btn');
 const header = document.querySelector('.header');
 const navLink = document.querySelectorAll('.header-bottom nav a');
+const promoBlock = document.querySelector('.promo');
 
 burger.addEventListener('click', () => {
   header.classList.toggle('open');
@@ -14,6 +15,8 @@ burger.addEventListener('click', () => {
     })
   })
 })
+
+promoBlock.style.marginTop = header.clientHeight + 'px';
 
 // ---------------------------Слайдер----------------------------
 const swiper = new Swiper('.swiper', {

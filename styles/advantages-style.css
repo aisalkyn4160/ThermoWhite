@@ -1,9 +1,8 @@
 .advantages p{
+    max-width: 744px;
     font-size: 20px;
-    font-size: calc(16px + (20 - 16) * ((100vw - 360px) / (1530 - 360)));
-    line-height: calc(24px + (28 - 24) * ((100vw - 360px) / (1530 - 360))); 
+    line-height: 140%;
     margin-bottom: 136px;
-    margin-bottom: calc(56px + (136 - 56) * ((100vw - 360px) / (1530 - 360)));
 }
 
 .advantages-items{
@@ -47,8 +46,10 @@
 }
 
 @media (max-width: 800px) {
-    .advantages p br{
-        display: none;
+    .advantages p{
+        font-size: 16px;
+        line-height: 150%;
+        margin-bottom: 56px;
     }
 }
     

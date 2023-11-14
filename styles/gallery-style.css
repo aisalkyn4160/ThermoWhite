@@ -1,7 +1,7 @@
 .gallery{
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: 100% 100%;
+    background-size: 100%;
+    background-position: top;
+    background-repeat: repeat-y;
 }
 
 .gallery h2{
@@ -42,7 +42,7 @@
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    gap: calc(16px + (24 - 16) * ((100vw - 360px) / (1530 - 360)));
+    gap: 24px;
 }
 
 .tabs-content__img{
@@ -61,6 +61,9 @@
 }
 
 @media (max-width: 1245px) {
+    .tabs-content__item.active{
+        gap: 20px;
+    }
     .tabs-content__img{
         width: 32%;
     }
