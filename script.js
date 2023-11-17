@@ -1,8 +1,23 @@
 // ---------------------------Burger-menu----------------------------
 const burger = document.querySelector('.header__burger-btn');
 const header = document.querySelector('.header');
-const navLink = document.querySelectorAll('.header-bottom nav a');
+const navLink = document.querySelectorAll('.header-bottom a');
+const mobileBtn = document.querySelector('.mobile-btn');
 const promoBlock = document.querySelector('.promo');
+const sections = document.querySelectorAll('section');
+
+navLink.forEach(link => {
+  link.addEventListener('click', (e) => {
+
+    sections.forEach((section) => {
+      if (link.getAttribute('href') === `#${section.id}`) {
+        section.style.paddingTop = header.clientHeight + 30 +'px';
+      } else {
+        section.style.paddingTop = '';
+      }
+    })
+  })
+})
 
 burger.addEventListener('click', () => {
   header.classList.toggle('open');
@@ -12,10 +27,27 @@ burger.addEventListener('click', () => {
       setTimeout(() => {
         header.classList.remove('open');
       }, 500)
+      
+      sections.forEach((section) => {
+        if (item.getAttribute('href') === `#${section.id}`) {
+          section.style.paddingTop = 100 +'px';
+        }
+      })
     })
   })
 })
 
+mobileBtn.addEventListener('click', () => {
+    setTimeout(() => {
+      header.classList.remove('open');
+    }, 500)
+    
+    sections.forEach((section) => {
+      if (mobileBtn.getAttribute('href') === `#${section.id}`) {
+        section.style.paddingTop = 100 +'px';
+      }
+    })
+})
 promoBlock.style.marginTop = header.clientHeight + 'px';
 
 // ---------------------------Слайдер----------------------------
